@@ -16,3 +16,6 @@ ExpressJS server
     ```
 - Go on the browser and go to
 [localhost:8000](localhost:8000)
+
+## Access from university's server 
+- Link to server: [http://doc.gold.ac.uk/usr/505/](http://doc.gold.ac.uk/usr/505/)
