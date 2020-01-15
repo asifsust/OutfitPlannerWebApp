@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/*to align any objects to the center*/
+.cntr{
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+/*creating the navigation bar*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(212,217,222);
+
+}
+nav .current a{
+    font-weight: bold;
+    border: 2px solid;
+    border-right: 10px;
+    border-left: 10px;
+    border-top: 10px;
+    
+}
+/*hover effect*/
+nav a:hover{
+    font-weight: bold;
+}
+.navli {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.navli a{
+    color: black;
+}
+
+
+
+/*inserting background images for main banners in each page*/
+.background1{
+    background:rgb(212,217,222);
+    background-size: cover;
+    padding: 10em 0;
+    border-left: 10px;
+    color: white;
+    text-align: center; 
+    height: 100%;
+}
+
+.background2{
+    background:rgb(212,217,222);
+    background-size: cover;
+    padding: 23em 0;
+    border-left: 10px;
+    color: white;
+    text-align: center; 
+    height: 100%;
+}
+#usernameAndPassword {
+    padding: 20px;
+    background-color: white;
+    border-radius: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+.uname {
+    background-color: white;
+    color:grey;
+    margin: 25px 0;
+    
+}
+
+.psw {
+    background-color: white;
+    color: grey;
+    margin: 25px 0;
+}
+
+.email {
+    background-color: white;
+    color:grey;
+    margin: 25px 0;
+    
+}
+#loginButton {
+    border-radius: 100px;
+    margin: 20px 0;
+    width: 85%;
+}
+
+#loginButtonTick {
+    position: absolute;
+    right: 5%;
+}
+
+
+
+#b {
+    margin-left: 10px;
+}
