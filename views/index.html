@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Home Page</title>
-    </head>
-    <body>
-        <h1>Home Page</h1>
-        <p>Home paragraph</p>
-    </body>
+
+<head>
+    <!-- CSS and JS gotten from CDNs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS and JS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bottomBar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- title of page -->
+    <title>Home Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- buttons -->
+    <div class="buttons">
+        <div class="add_buttons">
+            <a href="add_clothing.html" class="btn-large">Add Clothing</a>
+            <a href="create_outfit.html" class="btn-large">Create Outfit</a>
+        </div>
+        <div class="favourite_buttons">
+            <a href="favourite_clothing.html" class="btn-large">Favourite Clothing</a>
+            <a href="favourite_outfit.html" class="btn-large">Favourite Outfit</a>
+        </div>
+        <div class="edit_buttons">
+            <a href="edit_clothing.html" class="btn-large">Edit Clothing</a>
+            <a href="edit_outfit.html" class="btn-large">Edit Outfit</a>
+        </div>
+    </div>
+    <!-- bottom navigation bar -->
+    <div class="bottom-nav">
+        <a href="index.html" class="teal-text"><i class="material-icons home">home</i><br>Home</a>
+        <a href="clothes.html"><i class="material-icons clothes">folder</i><br>Clothes</a>
+        <a href="outfits.html"><i class="material-icons outfits">nature_people</i><br>Outfits</a>
+        <a href="profile.html"><i class="material-icons profile">person</i><br>Profile</a>
+    </div>
+</body>
 </html>
