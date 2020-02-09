@@ -12,7 +12,7 @@ ExpressJS server
 ## Run and Access
 - Run following code to run server
     ```
-    node .\index.js
+    npm start
     ```
 - Go on the browser and go to
 [localhost:8000](localhost:8000)
