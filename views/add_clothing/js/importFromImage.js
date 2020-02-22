@@ -1,5 +1,5 @@
-function selected(hello) {
-	if (hello.files && hello.files[0] && checkFileType(hello.files[0])) {
+function selected(form) {
+	if (form.files && form.files[0]) {
 		let reader = new FileReader();
 		reader.onload = function (e) {
 			localStorage.setItem("tempImage",e.target.result)
@@ -7,6 +7,6 @@ function selected(hello) {
 			$('#image_chosen').removeAttr("style");
 			$("button").removeAttr("disabled");
 		};
-		reader.readAsDataURL(hello.files[0]);
+		reader.readAsDataURL(form.files[0]);
 	}
 }
