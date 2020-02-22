@@ -5,3 +5,8 @@
 h1 {
     font-size: 25px;
 }
+
+#image_chosen{
+    width: 80%;
+    max-width: 500px;
+}
