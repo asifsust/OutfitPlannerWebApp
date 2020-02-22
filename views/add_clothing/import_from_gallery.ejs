@@ -27,11 +27,11 @@
     <div class="row">
         <h1>Upload Image of Piece of Clothing</h1>
         <img id="image_chosen" src="#" style="display:none" />
-        <form action="/add_clothing/set_categories" method="POST" enctype="multipart/form-data">
+        <form action="/add_clothing/set_categories" method="POST">
             <div class="file-field input-field">
                 <div class="btn">
                     <span>Choose</span>
-                    <input name="imageToUpload" type="file" onchange="selected(this);">
+                    <input name="imageToUpload" type="file" onchange="selected(this);" accept=".jpg,.png,.jpeg,.gif">
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path" type="text" placeholder="Upload file">
@@ -42,7 +42,7 @@
     </div>
     <!-- bottom navigation bar -->
     <div class="bottom-nav">
-        <a href="/index"><i class="material-icons home">home</i><br>Home</a>
+        <a href="/"><i class="material-icons home">home</i><br>Home</a>
         <a href="/clothes"><i class="material-icons clothes">folder</i><br>Clothes</a>
         <a href="/outfits"><i class="material-icons outfits">nature_people</i><br>Outfits</a>
         <a href="/profile"><i class="material-icons profile">person</i><br>Profile</a>
