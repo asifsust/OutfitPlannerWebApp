@@ -7,7 +7,6 @@ const app = express();
 const port = 8000;
 
 //to upload and image
-require('./middleware/uploadImage')(app,express,multer,path);
 require('./middleware/setCategories.js')(app,express,multer,path);
 require('./routes/main')(app);
 app.set('views', __dirname + '/views');

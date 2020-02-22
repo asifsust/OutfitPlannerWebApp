@@ -9,11 +9,14 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- CSS and JS -->
     <link rel="stylesheet" href="css/import_from_gallery.css">
     <link rel="stylesheet" href="css/bottomBar.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/importFromImage.js"></script>
     <!-- title of page -->
     <title>Import from Gallery - Add Clothing</title>
 
@@ -23,30 +26,18 @@
 <body>
     <div class="row">
         <h1>Upload Image of Piece of Clothing</h1>
-        <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
-        <% if (typeof file == 'undefined') { %>
-        <form action="/add_clothing/import_from_gallery" method="post" enctype="multipart/form-data">
-        <% } else { %>
-        <form action="/add_clothing/set_categories" method="GET" enctype="multipart/form-data">
-        <% } %>
+        <img id="image_chosen" src="#" style="display:none" />
+        <form action="/add_clothing/set_categories" method="POST" enctype="multipart/form-data">
             <div class="file-field input-field">
                 <div class="btn">
                     <span>Choose</span>
-                    <input name="imageToUpload" type="file">
+                    <input name="imageToUpload" type="file" onchange="selected(this);">
                 </div>
                 <div class="file-path-wrapper">
-                    <% if (typeof file == 'undefined') { %>
-                    <input class="file-path validate" type="text" placeholder="Upload file">
-                    <% } else { %>
-                    <input class="file-path validate" type="text" placeholder="Upload file" value="<%= file %>">
-                    <% } %>
+                    <input class="file-path" type="text" placeholder="Upload file">
                 </div>
             </div>
-            <% if (typeof file != 'undefined') { %>
-            <button type="submit" class="btn-large">Continue</button>
-            <% } else { %>
-            <button type="submit" class="btn-large">Upload</button>
-            <% } %>
+            <button type="submit" class="btn-large" disabled>Continue</button>
         </form>
     </div>
     <!-- bottom navigation bar -->
