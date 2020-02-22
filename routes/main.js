@@ -23,9 +23,6 @@ module.exports = function (app) {
     });
 
     //index
-    app.get('/add_clothing', function (req, res) {
-        res.render('add_clothing.html');
-    });
     app.get('/create_outfit', function (req, res) {
         res.render('create_outfit.html');
     });
@@ -42,4 +39,18 @@ module.exports = function (app) {
         res.render('favourite_outfit.html');
     });
 
+    //add clothing
+    app.get('/add_clothing', function (req, res) {
+        res.render('add_clothing.html');
+    });
+    app.get('add_clothing/take_picture', function (req, res) {
+        res.render('add_clothing/take_picture.html');
+    });
+    app.get('/add_clothing/import_from_gallery', function (req, res) {
+        res.render('add_clothing/import_from_gallery.ejs');
+    });
+    app.get('add_clothing/import_from_url', function (req, res) {
+        res.render('add_clothing/import_from_url.html');
+    });
+    //each direct is handled in their own js in the middleware folder
 }
