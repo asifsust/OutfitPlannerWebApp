@@ -43,13 +43,10 @@ module.exports = function (app) {
     app.get('/add_clothing', function (req, res) {
         res.render('add_clothing.html');
     });
-    app.get('add_clothing/take_picture', function (req, res) {
-        res.render('add_clothing/take_picture.html');
+    app.get('/add_clothing/import_from_device', function (req, res) {
+        res.render('add_clothing/import_from_device.html');
     });
-    app.get('/add_clothing/import_from_gallery', function (req, res) {
-        res.render('add_clothing/import_from_gallery.ejs');
-    });
-    app.get('add_clothing/import_from_url', function (req, res) {
+    app.get('/add_clothing/import_from_url', function (req, res) {
         res.render('add_clothing/import_from_url.html');
     });
 
