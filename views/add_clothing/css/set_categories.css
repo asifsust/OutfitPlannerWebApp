@@ -1,0 +1,12 @@
+.row {
+    width: 80%;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+#image_chosen {
+    width:90%;
+    max-width: 400px;
+}

@@ -10,7 +10,6 @@ const port = 8000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-require('./middleware/setCategories.js')(app,express,multer,path);
 require('./routes/main')(app);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
