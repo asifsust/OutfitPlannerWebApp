@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- CSS and JS -->
     <link rel="stylesheet" href="css/import_from_gallery.css">
@@ -27,17 +28,66 @@
     <div class="row">
         <h1>Upload Image of Piece of Clothing</h1>
         <img id="image_chosen" src="#" style="display:none" />
-        <form action="/add_clothing/set_categories" method="POST">
+        <form action="/add_clothing/confirm" method="POST" enctype="multipart/form-data">
+
             <div class="file-field input-field">
                 <div class="btn">
                     <span>Choose</span>
-                    <input name="imageToUpload" type="file" onchange="selected(this);" accept=".jpg,.png,.jpeg,.gif">
+                    <input name="image" type="file" onchange="showImage(event);unlockConfirm();"
+                        accept=".jpg,.png,.jpeg,.gif">
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path" type="text" placeholder="Upload file">
                 </div>
             </div>
-            <button type="submit" class="btn-large" disabled>Continue</button>
+
+            <div class="input-field col s12">
+                <input name="name" type="text" class="validate" onchange="unlockConfirm()">
+                <label for="password">Name</label>
+            </div>
+            <script>
+
+            </script>
+            <div class="input-field col s12">
+                <select name="type" onchange="unlockConfirm()">
+                    <option value="Torso">Torso</option>
+                    <option value="Legs">Legs</option>
+                    <option value="Feet">Feet</option>
+                    <option value="Head">Head</option>
+                    <option value="Arms">Arms</option>
+                    <option value="Hand">Hand</option>
+                </select>
+                <label>Type Of Clothing</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select name="colour" multiple onchange="unlockConfirm()">
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label>Colour</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select name="weather" multiple onchange="unlockConfirm()">
+                    <option value="Clear">Clear</option>
+                    <option value="Overcast">Overcast</option>
+                    <option value="Cloudy">Cloudy</option>
+                    <option value="Rainy">Rainy</option>
+                    <option value="Thunderstorm">Thunderstorm</option>
+                    <option value="Snowing">Snowing</option>
+                </select>
+                <label>Weather</label>
+            </div>
+
+            <button type="submit" class="btn-large" disabled>Confirm</button>
         </form>
     </div>
     <!-- bottom navigation bar -->

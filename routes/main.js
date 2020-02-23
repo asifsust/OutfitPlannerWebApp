@@ -52,5 +52,9 @@ module.exports = function (app) {
     app.get('add_clothing/import_from_url', function (req, res) {
         res.render('add_clothing/import_from_url.html');
     });
+
+    app.post('/add_clothing/set_categories', function (req, res) {
+        res.render('add_clothing/set_categories.ejs');
+    });
     //each direct is handled in their own js in the middleware folder
 }

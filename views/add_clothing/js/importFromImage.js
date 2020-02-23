@@ -1,12 +1,28 @@
-function selected(form) {
-	if (form.files && form.files[0]) {
-		let reader = new FileReader();
-		reader.onload = function (e) {
-			localStorage.setItem("tempImage",e.target.result)
-			$('#image_chosen').attr('src', e.target.result);
-			$('#image_chosen').removeAttr("style");
-			$("button").removeAttr("disabled");
-		};
-		reader.readAsDataURL(form.files[0]);
+$(document).ready(function () {
+	$('select').formSelect();
+	$("input[name='name']").focus();
+});
+
+function showImage(event) {
+	if (event.target.files && event.target.files[0]) {
+		$('#image_chosen').attr("src",URL.createObjectURL(event.target.files[0]));
+		$('#image_chosen').removeAttr("style");
+	}
+	else {
+		$('#image_chosen').removeAttr("src");
+		$('#image_chosen').attr("style", "display: none;");
+	}
+};
+
+function unlockConfirm() {
+	if ($("input[name='name']").val().length > 0
+		&& $("select[name='colour']").val().length
+		&& $("select[name='type']").val().length
+		&& $("select[name='weather']").val().length
+		&& $("input[name='image']")[0].files.length
+	) {
+		$("button").removeAttr("disabled");
+	} else {
+		$("button").attr("disabled", "");
 	}
 }
