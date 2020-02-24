@@ -13,6 +13,7 @@
   "author": "Software Projects Group 5",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcrypt": "^4.0.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
