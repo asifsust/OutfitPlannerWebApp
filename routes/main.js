@@ -53,5 +53,16 @@ module.exports = function (app) {
     app.post('/add_clothing/set_categories', function (req, res) {
         res.render('add_clothing/set_categories.ejs');
     });
+
+    //create outfit
+    app.get('/create_outfit/create_randomly', function (req, res) {
+        res.render('create_outfit/create_randomly.html');
+    });
+    app.get('/create_outfit/choose_by_weather', function (req, res) {
+        res.render('create_outfit/choose_by_weather.html');
+    });
+    app.get('/create_outfit/create_manually', function (req, res) {
+        res.render('create_outfit/create_manually.html');
+    });
     //each direct is handled in their own js in the middleware folder
 }
