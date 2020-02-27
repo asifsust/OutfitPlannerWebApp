@@ -16,7 +16,7 @@ module.exports = function (app, express, multer, path) {
         const saltRounds = 10;
         bcrypt.hash("somewords", saltRounds, function (err, hash) {
             async function downloadImage() {
-                hash = hash.replace("/", "").replace(".", "");
+                hash = hash.replace(/\./g,"").replace(/\//g,"");
 
                 const url = req.body.url;
                 var regex = /(?:\.([^.]+))?$/;

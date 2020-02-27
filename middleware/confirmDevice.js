@@ -11,7 +11,7 @@ module.exports = function (app, express, multer, path) {
             const saltRounds = 10;
             bcrypt.hash("somewords", saltRounds, function (err, hash) {
                 // Store hash in your password DB.
-                hash = hash.replace("/", "").replace(".", "");
+                hash = hash.replace(/\./g, "").replace(/\//g, "");
                 console.log("hash: " + hash + path.extname(file.originalname));
                 cb(null, hash + path.extname(file.originalname));
             });
@@ -36,7 +36,7 @@ module.exports = function (app, express, multer, path) {
             (`name`, `weather`, `colour`, `type`, `favourite`, `filepath`, `userID`) \
             VALUES \
             (?,?,?,?,0,?,1)";
-            let newrecord = [req.body.name,req.body.weather.toString(), req.body.colour.toString(), req.body.type, req.file.filename];
+            let newrecord = [req.body.name, req.body.weather.toString(), req.body.colour.toString(), req.body.type, req.file.filename];
             connection.query(sqlquery, newrecord, (err, result) => {
                 if (err) {
                     return console.error(err.message);
