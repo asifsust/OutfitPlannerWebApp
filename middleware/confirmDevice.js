@@ -32,7 +32,7 @@ module.exports = function (app, express, multer, path) {
             }
 
             //useID = 1 for now
-            let sqlquery = "INSERT INTO `softproj`.`clothing` \
+            let sqlquery = "INSERT INTO `softproj`.`Clothing` \
             (`name`, `weather`, `colour`, `type`, `favourite`, `filepath`, `userID`) \
             VALUES \
             (?,?,?,?,0,?,1)";
