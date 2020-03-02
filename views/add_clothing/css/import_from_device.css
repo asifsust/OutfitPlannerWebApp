@@ -10,3 +10,7 @@ h1 {
     width: 80%;
     max-width: 500px;
 }
+
+#name-label {
+    margin-top: 0;
+}
