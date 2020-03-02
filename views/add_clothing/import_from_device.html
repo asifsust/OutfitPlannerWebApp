@@ -49,7 +49,8 @@
 
             </script>
             <div class="input-field col s12">
-                <select name="type" onchange="unlockConfirm()">
+                <select name="type" class="browser-default" onchange="unlockConfirm()">
+                    <option value="" disabled selected>Type</option>
                     <option value="Torso">Torso</option>
                     <option value="Legs">Legs</option>
                     <option value="Feet">Feet</option>
@@ -57,7 +58,6 @@
                     <option value="Arms">Arms</option>
                     <option value="Hand">Hand</option>
                 </select>
-                <label>Type Of Clothing</label>
             </div>
 
             <div class="input-field col s12">
