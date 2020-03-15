@@ -15,8 +15,6 @@
 
 
     <!-- CSS and JS gotten from CDNs -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,6 +23,7 @@
     <link rel="stylesheet" href="css/bottomBar.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/create_manually.css">
+    <script src="js/create_manually.js"></script>
     <!-- title of page -->
     <title>Select Way of Adding Clothing - Outfit Picker</title>
 
@@ -33,9 +32,26 @@
 
 <body>
     <!-- start of content-->
-    <h1>Choose Clothes</h1>
+    <h1>Create Outfit</h1>
 
-    <form action="/create_outfit/confirmOutfit" method="POST" enctype="multipart/form-data">
+    <form action="/create_outfit/confirmOutfit" method="POST">
+
+        <div class="input-field col s12">
+            <p id="name-label">Name</p>
+            <input name="name" type="text" class="validate browser-default" onchange="unlockConfirm();">
+        </div>
+
+        <div class="input-field col s12">
+            <select name="weather" multiple onchange="unlockConfirm();">
+                <option value="Clear">Clear</option>
+                <option value="Overcast">Overcast</option>
+                <option value="Cloudy">Cloudy</option>
+                <option value="Rainy">Rainy</option>
+                <option value="Thunderstorm">Thunderstorm</option>
+                <option value="Snowing">Snowing</option>
+            </select>
+            <label>Weather</label>
+        </div>
 
         <span class="heading">
             Tops
@@ -44,7 +60,7 @@
             <% for( let index = 0; index < Torso.length; index++ ) { %>
             <label class="box">
                 <img src="/images/<%= Torso[index].filepath%>" alt="training">
-                <input type="checkbox" />
+                <input type="checkbox" name="<%= Torso[index].ID %>" onchange="unlockConfirm();"/>
                 <span><%= Torso[index].name%></span>
             </label>
             <% } %>
@@ -57,7 +73,7 @@
             <% for( let index = 0; index < Legs.length; index++ ) { %>
             <label class="box">
                 <img src="/images/<%= Legs[index].filepath%>" alt="training">
-                <input type="checkbox" />
+                <input type="checkbox" name="<%= Legs[index].ID %>" onchange="unlockConfirm();"/>
                 <span><%= Legs[index].name%></span>
             </label>
             <% } %>
@@ -70,7 +86,7 @@
             <% for( let index = 0; index < Feet.length; index++ ) { %>
             <label class="box">
                 <img src="/images/<%= Feet[index].filepath%>" alt="training">
-                <input type="checkbox" />
+                <input type="checkbox" name="<%= Feet[index].ID %>" onchange="unlockConfirm();"/>
                 <span><%= Feet[index].name%></span>
             </label>
             <% } %>
@@ -83,7 +99,7 @@
             <% for( let index = 0; index < Head.length; index++ ) { %>
             <label class="box">
                 <img src="/images/<%= Head[index].filepath%>" alt="training">
-                <input type="checkbox" />
+                <input type="checkbox" name="<%= Head[index].ID %>" onchange="unlockConfirm();"/>
                 <span><%= Head[index].name%></span>
             </label>
             <% } %>
@@ -96,7 +112,7 @@
             <% for( let index = 0; index < Arms.length; index++ ) { %>
             <label class="box">
                 <img src="/images/<%= Arms[index].filepath%>" alt="training">
-                <input type="checkbox" />
+                <input type="checkbox" name="<%= Arms[index].ID %>" onchange="unlockConfirm();"/>
                 <span><%= Arms[index].name%></span>
             </label>
             <% } %>
@@ -109,14 +125,15 @@
             <% for( let index = 0; index < Hand.length; index++ ) { %>
             <label class="box">
                 <img src="/images/<%= Hand[index].filepath%>" alt="training">
-                <input type="checkbox" />
+                <input type="checkbox" name="<%= Hand[index].ID %>" onchange="unlockConfirm();"/>
                 <span><%= Hand[index].name%></span>
             </label>
             <% } %>
         </div>
 
+        <input type="date" name="date" onchange="unlockConfirm();">
 
-        <button type="submit" class="btn-large">
+        <button type="submit" class="btn-large" disabled>
             <i class="material-icons right" id="loginButtonTick">check_circle</i>
             Confirm Outfit
         </button>
@@ -124,7 +141,7 @@
     </form>
 
     <!-- bottom navigation bar -->
-    <div class="bottom-nav">
+    <div class="bottom-nav"> 
         <a href="/"><i class="material-icons home">home</i><br>Home</a>
         <a href="clothes"><i class="material-icons clothes">folder</i><br>Clothes</a>
         <a href="outfits"><i class="material-icons outfits">nature_people</i><br>Outfits</a>

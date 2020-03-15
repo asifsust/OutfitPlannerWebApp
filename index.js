@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 require('./middleware/confirmDevice')(app,express,multer,path);
 require('./middleware/confirmURL')(app,express,multer,path);
 require('./middleware/getClothing')(app,express,multer);
+require('./middleware/confirmOutfit')(app,express,multer);
 
 require('./routes/main')(app);
 app.set('views', __dirname + '/views');
