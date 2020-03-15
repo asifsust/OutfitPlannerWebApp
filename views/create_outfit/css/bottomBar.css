@@ -1,0 +1,35 @@
+body {
+  padding-bottom: 110px;
+}
+
+.bottom-nav {
+  margin-top: 10px;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  overflow: auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.bottom-nav a {
+  color: #444;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 5%;
+  display:inline-block;
+}
+
+.bottom-nav a:hover{
+  transition: ease-in;
+  transition-duration: 0.25s;
+  background-color: #eee;
+}
+
+.bottom-nav a i{
+  display:block; /*remove inline-block spaces*/
+  height: 3px;
+  margin: 0;
+  padding: 0;
+}

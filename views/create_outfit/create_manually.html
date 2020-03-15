@@ -9,8 +9,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/createOutfit.css"><!-- calling css-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><!-- calling font style-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
 
@@ -23,9 +22,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS and JS -->
-    <link rel="stylesheet" href="css/add_clothing.css">
     <link rel="stylesheet" href="css/bottomBar.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/create_manually.css">
     <!-- title of page -->
     <title>Select Way of Adding Clothing - Outfit Picker</title>
 
@@ -33,68 +32,170 @@
 </head>
 
 <body>
+    <!-- start of content-->
+    <h1>Choose Clothes</h1>
 
-    <div class="background1">
-        <!-- start of content-->
-        <h1>Create Manually</h1>
+    <form action="/add_clothing/confirmDevice" method="POST" enctype="multipart/form-data">
 
-        <div id="heading">
-            <a>Choose Top</a>
+        <span class="heading">
+            Choose Tops
+        </span>
+        <div id="torso" class="boxes">
+            <label class="box top">
+                <img src="img/top1.jpg" alt="training">
+                <input type="checkbox" />
+                <span>
+                    <p1>Top 1</p1>
+                </span>
+            </label>
+            <label class="box top">
+                <img src="img/top2.jpg" alt="diet">
+                <input type="checkbox" />
+                <span>Top 2</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Top 3</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Top 3</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Top 3</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Top 3</span>
+            </label>
         </div>
-        <section id="boxes">
-            <!-- creating a container to make page responsive-->
-            <div class="container">
-                <div class="box">
-                    <a><img src="img/top1.jpg" alt="training"></a>
-                </div>
-                <div class="box">
-                    <a><img src="img/top2.jpg" alt="diet"></a><!-- image-->
-                </div>
-                <div class="box">
-                    <a><img src="img/top3.jpg" alt="extra"></a><!-- image-->
-                </div>
-            </div>
-        </section>
-        <section id="boxes">
-            <!-- creating a container to make page responsive-->
-            <div class="container">
-                <div class="box">
-                    <a><img src="img/top4.jpg" alt="training"></a>
-                </div>
-                <div class="box">
-                    <a><img src="img/top5.jpg" alt="diet"></a><!-- image-->
-                </div>
-                <div class="box">
-                    <a><img src="img/top6.jpg" alt="extra"></a><!-- image-->
-                </div>
-            </div>
-        </section>
-        <section id="boxes">
-            <!-- creating a container to make page responsive-->
-            <div class="container">
-                <div class="box">
-                    <a><img src="img/top7.jpg" alt="training"></a>
-                </div>
-                <div class="box">
-                    <a><img src="img/top8.jpg" alt="diet"></a><!-- image-->
-                </div>
-                <div class="box">
-                    <a><img src="img/top9.jpg" alt="extra"></a><!-- image-->
-                </div>
-            </div>
-        </section>
-        <a href="confirmBottoms.html" class="waves-effect waves-light btn" id="loginButton">
-            <i class="material-icons right" id="loginButtonTick">check_circle</i>Confirm top</a>
+
+        <span class="heading">
+            Choose Legs
+        </span>
+
+        <div id="legs" class="boxes">
+            <label class="box top">
+                <img src="img/top1.jpg" alt="training">
+                <input type="checkbox" />
+                <span>Legs 1</span>
+            </label>
+            <label class="box top">
+                <img src="img/top2.jpg" alt="diet">
+                <input type="checkbox" />
+                <span>Legs 2</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Legs 3</span>
+            </label>
+        </div>
+
+        <!-- <div class="heading">
+                <p1>Choose Feet</p1>
+            </div> -->
+        <span class="heading">
+            Choose Feet
+        </span>
+        <div id="feet" class="boxes">
+            <label class="box top">
+                <img src="img/top1.jpg" alt="training">
+                <input type="checkbox" />
+                <span>Feet 1</span>
+            </label>
+            <label class="box top">
+                <img src="img/top2.jpg" alt="diet">
+                <input type="checkbox" />
+                <span>Feet 2</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Feet 3</span>
+            </label>
+        </div>
+
+        <!-- <div class="heading">
+                <p1>Choose Head</p1>
+            </div> -->
+        <span class="heading">
+            Choose Head
+        </span>
+        <div id="head" class="boxes">
+            <label class="box top">
+                <img src="img/top1.jpg" alt="training">
+                <input type="checkbox" />
+                <span>Head 1</span>
+            </label>
+            <label class="box top">
+                <img src="img/top2.jpg" alt="diet">
+                <input type="checkbox" />
+                <span>Head 2</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Head 3</span>
+            </label>
+        </div>
+        <span class="heading">
+            Choose Arms
+        </span>
+        <div id="arms" class="boxes">
+            <label class="box top">
+                <img src="img/top1.jpg" alt="training">
+                <input type="checkbox" />
+                <span>Arms 1</span>
+            </label>
+            <label class="box top">
+                <img src="img/top2.jpg" alt="diet">
+                <input type="checkbox" />
+                <span>Arms 2</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Arms 3</span>
+            </label>
+        </div>
+
+        <!-- <div class="heading">
+                <p1>Choose Hands</p1>
+            </div> -->
+        <span class="heading">
+            Choose Hands
+        </span>
+        <div id="hands" class="boxes">
+            <label class="box top">
+                <img src="img/top1.jpg" alt="training">
+                <input type="checkbox" />
+                <span>Hands 1</span>
+            </label>
+            <label class="box top">
+                <img src="img/top2.jpg" alt="diet">
+                <input type="checkbox" />
+                <span>Hands 2</span>
+            </label>
+            <label class="box top">
+                <img src="img/top3.jpg" alt="extra">
+                <input type="checkbox" />
+                <span>Hands 3</span>
+            </label>
+        </div>
 
 
+        <button type="submit" class="btn-large">
+            <i class="material-icons right" id="loginButtonTick">check_circle</i>
+            Confirm Outfit
+        </button>
 
-    </div>
-
-    <div class="background2">
-        <!-- start of content-->
-
-    </div>
-
+    </form>
 
     <!-- bottom navigation bar -->
     <div class="bottom-nav">
