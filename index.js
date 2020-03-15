@@ -23,10 +23,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 require('./middleware/confirmDevice')(app,express,multer,path);
 require('./middleware/confirmURL')(app,express,multer,path);
+require('./middleware/getClothing')(app,express,multer);
+
 require('./routes/main')(app);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', ejs.renderFile);
 app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

@@ -35,158 +35,84 @@
     <!-- start of content-->
     <h1>Choose Clothes</h1>
 
-    <form action="/add_clothing/confirmDevice" method="POST" enctype="multipart/form-data">
+    <form action="/create_outfit/confirmOutfit" method="POST" enctype="multipart/form-data">
 
         <span class="heading">
-            Choose Tops
+            Tops
         </span>
         <div id="torso" class="boxes">
-            <label class="box top">
-                <img src="img/top1.jpg" alt="training">
+            <% for( let index = 0; index < Torso.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Torso[index].filepath%>" alt="training">
                 <input type="checkbox" />
-                <span>
-                    <p1>Top 1</p1>
-                </span>
+                <span><%= Torso[index].name%></span>
             </label>
-            <label class="box top">
-                <img src="img/top2.jpg" alt="diet">
-                <input type="checkbox" />
-                <span>Top 2</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Top 3</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Top 3</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Top 3</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Top 3</span>
-            </label>
+            <% } %>
         </div>
 
         <span class="heading">
-            Choose Legs
+            Legs
         </span>
-
         <div id="legs" class="boxes">
-            <label class="box top">
-                <img src="img/top1.jpg" alt="training">
+            <% for( let index = 0; index < Legs.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Legs[index].filepath%>" alt="training">
                 <input type="checkbox" />
-                <span>Legs 1</span>
+                <span><%= Legs[index].name%></span>
             </label>
-            <label class="box top">
-                <img src="img/top2.jpg" alt="diet">
-                <input type="checkbox" />
-                <span>Legs 2</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Legs 3</span>
-            </label>
+            <% } %>
         </div>
 
-        <!-- <div class="heading">
-                <p1>Choose Feet</p1>
-            </div> -->
         <span class="heading">
-            Choose Feet
+            Feet
         </span>
         <div id="feet" class="boxes">
-            <label class="box top">
-                <img src="img/top1.jpg" alt="training">
+            <% for( let index = 0; index < Feet.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Feet[index].filepath%>" alt="training">
                 <input type="checkbox" />
-                <span>Feet 1</span>
+                <span><%= Feet[index].name%></span>
             </label>
-            <label class="box top">
-                <img src="img/top2.jpg" alt="diet">
-                <input type="checkbox" />
-                <span>Feet 2</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Feet 3</span>
-            </label>
+            <% } %>
         </div>
 
-        <!-- <div class="heading">
-                <p1>Choose Head</p1>
-            </div> -->
         <span class="heading">
-            Choose Head
+            Head
         </span>
         <div id="head" class="boxes">
-            <label class="box top">
-                <img src="img/top1.jpg" alt="training">
+            <% for( let index = 0; index < Head.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Head[index].filepath%>" alt="training">
                 <input type="checkbox" />
-                <span>Head 1</span>
+                <span><%= Head[index].name%></span>
             </label>
-            <label class="box top">
-                <img src="img/top2.jpg" alt="diet">
-                <input type="checkbox" />
-                <span>Head 2</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Head 3</span>
-            </label>
-        </div>
-        <span class="heading">
-            Choose Arms
-        </span>
-        <div id="arms" class="boxes">
-            <label class="box top">
-                <img src="img/top1.jpg" alt="training">
-                <input type="checkbox" />
-                <span>Arms 1</span>
-            </label>
-            <label class="box top">
-                <img src="img/top2.jpg" alt="diet">
-                <input type="checkbox" />
-                <span>Arms 2</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Arms 3</span>
-            </label>
+            <% } %>
         </div>
 
-        <!-- <div class="heading">
-                <p1>Choose Hands</p1>
-            </div> -->
         <span class="heading">
-            Choose Hands
+            Arms
+        </span>
+        <div id="arms" class="boxes">
+            <% for( let index = 0; index < Arms.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Arms[index].filepath%>" alt="training">
+                <input type="checkbox" />
+                <span><%= Arms[index].name%></span>
+            </label>
+            <% } %>
+        </div>
+
+        <span class="heading">
+            Hands
         </span>
         <div id="hands" class="boxes">
-            <label class="box top">
-                <img src="img/top1.jpg" alt="training">
+            <% for( let index = 0; index < Hand.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Hand[index].filepath%>" alt="training">
                 <input type="checkbox" />
-                <span>Hands 1</span>
+                <span><%= Hand[index].name%></span>
             </label>
-            <label class="box top">
-                <img src="img/top2.jpg" alt="diet">
-                <input type="checkbox" />
-                <span>Hands 2</span>
-            </label>
-            <label class="box top">
-                <img src="img/top3.jpg" alt="extra">
-                <input type="checkbox" />
-                <span>Hands 3</span>
-            </label>
+            <% } %>
         </div>
 
 
