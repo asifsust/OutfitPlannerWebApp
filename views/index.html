@@ -2,10 +2,71 @@
 <html>
 
 <head>
-    <title>Geolocation Tests</title>
-</head>
+    <!-- CSS and JS gotten from CDNs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<body>
+    <!-- CSS and JS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bottomBar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- title of page -->
+    <title>Home Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendarElement = document.querySelector('.datepicker');
+            const Calendar = M.Datepicker;
+            calendarPlace = document.getElementsByClassName("calendar");
+            Calendar.init(calendarElement, {});
+            // calendarElement.click(); do show calendar on after loading
+        });
+    </script>
+    
+    <div class="calendar">
+        <input type="text" class="datepicker">
+    </div>
+
+    <!-- buttons -->
+    <div class="buttons">
+        <div class="add_buttons">
+            <a href="add_clothing" class="btn-large">
+                <p>Add Clothing</p>
+            </a>
+            <a href="create_outfit" class="btn-large">
+                <p>Create Outfit</p>
+            </a>
+        </div>
+        <div class="edit_buttons">
+            <a href="edit_clothing" class="btn-large">
+                <p>Edit Clothing</p>
+            </a>
+            <a href="edit_outfit" class="btn-large">
+                <p>Edit Outfit</p>
+            </a>
+        </div>
+        <div class="favourite_buttons">
+            <a href="favourite_clothing" class="btn-large">
+                <p>Favourite Clothing</p>
+            </a>
+            <a href="favourite_outfit" class="btn-large">
+                <p>Favourite Outfit</p>
+            </a>
+        </div>
+    </div>
+    <!-- bottom navigation bar -->
+    <div class="bottom-nav">
+        <a href="/" class="teal-text"><i class="material-icons home">home</i><br>Home</a>
+        <a href="clothes"><i class="material-icons clothes">folder</i><br>Clothes</a>
+        <a href="outfits"><i class="material-icons outfits">nature_people</i><br>Outfits</a>
+        <a href="profile"><i class="material-icons profile">person</i><br>Profile</a>
+    </div>
+    
+    <title>Geolocation Tests</title>
     <p>Click the button to get your coordinates.</p>
 
     <button id="get-location">Try It</button>
@@ -19,6 +80,7 @@
     
     <p id="weather"></p>
     <script src="clientjs/getWeather.js"></script>
+    
 </body>
 
 </html>

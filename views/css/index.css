@@ -1,0 +1,21 @@
+
+.buttons a{
+    margin: 5px;
+    min-width: 25%;
+    font-size: 1em;
+}
+
+.buttons a p{
+    margin:0;
+    padding:0;
+    font-size: 1em;
+}
+
+/* select the calendar */
+.modal-content {
+    display: inline;
+}
+
+.modal-overlay {
+    display:none;
+}

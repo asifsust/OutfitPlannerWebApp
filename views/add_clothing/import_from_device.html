@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- CSS and JS gotten from CDNs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- CSS and JS -->
+    <link rel="stylesheet" href="css/import_from_device.css">
+    <link rel="stylesheet" href="css/bottomBar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/importFromDevice.js"></script>
+    <!-- title of page -->
+    <title>Import from Device - Add Clothing</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="row">
+        <h1>Add Clothing using Image from Device</h1>
+        <img id="image_chosen" src="#" style="display:none" />
+        <form action="/add_clothing/confirmDevice" method="POST" enctype="multipart/form-data">
+
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Choose Image</span>
+                    <input name="image" type="file" onchange="showImage(event);unlockConfirm();"
+                        accept="image/*">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path" type="text" placeholder="Upload Image">
+                </div>
+            </div>
+
+            <div class="input-field col s12">
+                <p id="name-label">Name</p>
+                <input name="name" type="text" class="validate browser-default onchange="unlockConfirm()">
+            </div>
+            <script>
+
+            </script>
+            <div class="input-field col s12">
+                <select name="type" class="browser-default" onchange="unlockConfirm()">
+                    <option value="" disabled selected>Type</option>
+                    <option value="Torso">Torso</option>
+                    <option value="Legs">Legs</option>
+                    <option value="Feet">Feet</option>
+                    <option value="Head">Head</option>
+                    <option value="Arms">Arms</option>
+                    <option value="Hand">Hand</option>
+                </select>
+            </div>
+
+            <div class="input-field col s12">
+                <select name="colour" multiple onchange="unlockConfirm()">
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label>Colour</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select name="weather" multiple onchange="unlockConfirm()">
+                    <option value="Clear">Clear</option>
+                    <option value="Overcast">Overcast</option>
+                    <option value="Cloudy">Cloudy</option>
+                    <option value="Rainy">Rainy</option>
+                    <option value="Thunderstorm">Thunderstorm</option>
+                    <option value="Snowing">Snowing</option>
+                </select>
+                <label>Weather</label>
+            </div>
+
+            <button type="submit" class="btn-large" disabled>Confirm</button>
+        </form>
+    </div>
+    <!-- bottom navigation bar -->
+    <div class="bottom-nav">
+        <a href="/"><i class="material-icons home">home</i><br>Home</a>
+        <a href="/clothes"><i class="material-icons clothes">folder</i><br>Clothes</a>
+        <a href="/outfits"><i class="material-icons outfits">nature_people</i><br>Outfits</a>
+        <a href="/profile"><i class="material-icons profile">person</i><br>Profile</a>
+    </div>
+</body>
+
+</html>
