@@ -17,20 +17,9 @@
     <title>Home Page</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const calendarElement = document.querySelector('.datepicker');
-            const Calendar = M.Datepicker;
-            calendarPlace = document.getElementsByClassName("calendar");
-            Calendar.init(calendarElement, {});
-            // calendarElement.click(); do show calendar on after loading
-        });
-    </script>
-    
-    <div class="calendar">
-        <input type="text" class="datepicker">
-    </div>
+</head>
 
+<body>
     <!-- buttons -->
     <div class="buttons">
         <div class="add_buttons">
@@ -61,9 +50,9 @@
     <!-- bottom navigation bar -->
     <div class="bottom-nav">
         <a href="/" class="teal-text"><i class="material-icons home">home</i><br>Home</a>
-        <a href="clothes"><i class="material-icons clothes">folder</i><br>Clothes</a>
-        <a href="outfits"><i class="material-icons outfits">nature_people</i><br>Outfits</a>
-        <a href="profile"><i class="material-icons profile">person</i><br>Profile</a>
+        <a href="/clothes"><i class="material-icons clothes">folder</i><br>Clothes</a>
+        <a href="/outfits"><i class="material-icons outfits">nature_people</i><br>Outfits</a>
+        <a href="#"><i class="material-icons profile">person</i><br>Profile</a>
     </div>
     
     <title>Geolocation Tests</title>
