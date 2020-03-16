@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Outfit</title><!-- Title for tab-->
+    <meta charset="utf-8">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+
+    <!-- CSS and JS gotten from CDNs -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS and JS -->
+    <link rel="stylesheet" href="css/bottomBar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/clothing.css">
+    <script src="js/create_manually.js"></script>
+    <!-- title of page -->
+    <title>Clothes</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- start of content-->
+    <h1>Clothes</h1>
+
+    <form action="/create_outfit/confirmOutfit" method="POST">
+        <span class="heading">
+            Tops
+        </span>
+        <div id="torso" class="boxes">
+            <% for( let index = 0; index < Torso.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Torso[index].filepath%>" alt="training">
+                <span><%= Torso[index].name%></span>
+                <span>Colour: <%= Torso[index].colour%></span>
+                <span>Weather: <%= Torso[index].weather%> </span>
+            </label>
+            <% } %>
+        </div>
+
+        <span class="heading">
+            Legs
+        </span>
+        <div id="legs" class="boxes">
+            <% for( let index = 0; index < Legs.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Legs[index].filepath%>" alt="training">
+                <span><%= Legs[index].name%></span>
+                <span>Colour: <%= Legs[index].colour%></span>
+                <span>Weather: <%= Legs[index].weather%> </span>
+            </label>
+            <% } %>
+        </div>
+
+        <span class="heading">
+            Feet
+        </span>
+        <div id="feet" class="boxes">
+            <% for( let index = 0; index < Feet.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Feet[index].filepath%>" alt="training">
+                <span><%= Feet[index].name%></span>
+                <span>Colour: <%= Feet[index].colour%></span>
+                <span>Weather: <%= Feet[index].weather%> </span>
+            </label>
+            <% } %>
+        </div>
+
+        <span class="heading">
+            Head
+        </span>
+        <div id="head" class="boxes">
+            <% for( let index = 0; index < Head.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Head[index].filepath%>" alt="training">
+                <span><%= Head[index].name%></span>
+                <span>Colour: <%= Head[index].colour%></span>
+                <span>Weather: <%= Head[index].weather%> </span>
+            </label>
+            <% } %>
+        </div>
+
+        <span class="heading">
+            Arms
+        </span>
+        <div id="arms" class="boxes">
+            <% for( let index = 0; index < Arms.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Arms[index].filepath%>" alt="training">
+                <span><%= Arms[index].name%></span>
+                <span>Colour: <%= Arms[index].colour%></span>
+                <span>Weather: <%= Arms[index].weather%> </span>
+            </label>
+            <% } %>
+        </div>
+
+        <span class="heading">
+            Hands
+        </span>
+        <div id="hands" class="boxes">
+            <% for( let index = 0; index < Hand.length; index++ ) { %>
+            <label class="box">
+                <img src="/images/<%= Hand[index].filepath%>" alt="training">
+                <span><%= Hand[index].name%></span>
+            </label>
+            <% } %>
+        </div>
+
+    </form>
+
+    <!-- bottom navigation bar -->
+    <div class="bottom-nav"> 
+        <a href="/"><i class="material-icons home">home</i><br>Home</a>
+        <a href="/clothes"><i class="material-icons clothes">folder</i><br>Clothes</a>
+        <a href="/outfits"><i class="material-icons outfits">nature_people</i><br>Outfits</a>
+        <a href="/profile"><i class="material-icons profile">person</i><br>Profile</a>
+    </div>
+
+</body>
+
+</html>

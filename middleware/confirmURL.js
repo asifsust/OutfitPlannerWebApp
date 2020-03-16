@@ -37,17 +37,7 @@ module.exports = function (app, express, multer, path) {
                 })
             }
             downloadImage()
-            res.send(
-                `
-                    <h1>Stuff to be added to MySQL</h1><br>
-                    Filepath: ${req.body.url}<br>
-                    <img src="${req.body.url}" style="width:500px"><br>
-                    Name: ${req.body.name}<br>
-                    Type: ${req.body.type}<br>
-                    Colour: ${req.body.colour}<br>
-                    Weather: ${req.body.weather}
-                `
-            );
+            res.redirect("/clothes");
         });
     });
 }

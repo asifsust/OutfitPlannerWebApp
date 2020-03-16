@@ -12,9 +12,6 @@ module.exports = function (app) {
     });
 
     //navbar
-    app.get('/clothes', function (req, res) {
-        res.render('clothes.html');
-    });
     app.get('/outfits', function (req, res) {
         res.render('outfits.html');
     });
