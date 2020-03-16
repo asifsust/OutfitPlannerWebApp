@@ -13,7 +13,6 @@ function unlockConfirm() {
 	if ($("input[name='name']").val().length > 0
 		&& $("select[name='weather']").val().length
 		&& $(".box > input:checked").val() === "on"
-		&& $("input[name='date']").val().length > 0
 	) {
 		$("button").removeAttr("disabled");
 	} else {

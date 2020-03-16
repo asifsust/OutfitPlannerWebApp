@@ -8,6 +8,7 @@ module.exports = function (app, express, multer) {
         VALUES \
         (?,?,?,?,0,1)";
         console.log(req.body);
+        if(req.body.date.length==0) req.body.date = null;
         let newrecord = [req.body.name, req.body.weather.toString(), req.body.date];
         delete req.body["name"];
         delete req.body["weather"];
