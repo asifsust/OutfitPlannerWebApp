@@ -43,7 +43,7 @@
 
             <div class="input-field col s12">
                 <p id="name-label">Name</p>
-                <input name="name" type="text" class="validate browser-default onchange="unlockConfirm()">
+                <input name="name" maxlength="20" type="text" class="validate browser-default" onchange="unlockConfirm()">
             </div>
             <script>
 
@@ -62,12 +62,14 @@
 
             <div class="input-field col s12">
                 <select name="colour" multiple onchange="unlockConfirm()">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Grey">Grey</option>
                     <option value="Red">Red</option>
                     <option value="Blue">Blue</option>
                     <option value="Green">Green</option>
+                    <option value="Pink">Pink</option>
                     <option value="Yellow">Yellow</option>
-                    <option value="Black">Black</option>
-                    <option value="White">White</option>
                     <option value="Orange">Orange</option>
                     <option value="Purple">Purple</option>
                     <option value="Other">Other</option>
