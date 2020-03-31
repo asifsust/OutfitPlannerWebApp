@@ -11,6 +11,9 @@ module.exports = function (app) {
             }
             else {
                 console.log("----------outfits-----------");
+                if (outfitResult.length == 0) {
+                    res.render('outfits.html', { clothes: clothing, outfits: outfitResult });
+                }
                 for (let index = 0; index < outfitResult.length; index++) {
                     console.log("Name: " + outfitResult[index].name, "| Clothing: " + outfitResult[index].clothing, "| Weather: " + outfitResult[index].weather);
 
@@ -34,7 +37,7 @@ module.exports = function (app) {
                         clothing[clothingResult[index].ID] = clothingResult[index];
                     }
                     console.log(outfitResult[0].date)
-                    res.render('outfits.html',{clothes:clothing,outfits:outfitResult});
+                    res.render('outfits.html', { clothes: clothing, outfits: outfitResult });
                 };
             });
 
