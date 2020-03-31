@@ -4,10 +4,10 @@ h1 {
 
 .boxes {
     margin: 10px 0;
-    display: inline-block;
-    overflow-y: scroll;
-    max-height: 150px;
+    display: inline-flex;
+    overflow-y: hidden;
     width: 90%;
+    display: flex;
 }
 
 .heading {
@@ -18,6 +18,7 @@ h1 {
 }
 
 .boxes .box {
+    flex-direction: row;
     float: left;
     margin: 0 10px;
 }
