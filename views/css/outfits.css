@@ -1,0 +1,25 @@
+h1 {
+    font-size: 25px;
+}
+
+#outfits {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.outfit {
+    display: flex;
+    flex-flow: column;
+    margin: 0 10px;
+}
+
+.outfit span {
+    display: block;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+}

@@ -26,6 +26,7 @@ require('./middleware/confirmURL')(app,express,multer,path);
 require('./middleware/getClothing')(app);
 require('./middleware/confirmOutfit')(app,express,multer);
 require('./middleware/showClothes')(app);
+require('./middleware/showOutfits')(app);
 
 require('./routes/main')(app);
 app.set('views', __dirname + '/views');
