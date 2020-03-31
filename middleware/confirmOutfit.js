@@ -27,6 +27,6 @@ module.exports = function (app, express, multer) {
             else
                 console.log("done outfit: check sql database");
         })
-        res.redirect("/");
+        res.redirect("../outfits");
     });
 }

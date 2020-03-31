@@ -37,7 +37,7 @@ module.exports = function (app, express, multer, path) {
                 })
             }
             downloadImage()
-            res.redirect("/clothes");
+            res.redirect("../clothes");
         });
     });
 }
