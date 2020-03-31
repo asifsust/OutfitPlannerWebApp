@@ -13,6 +13,7 @@ module.exports = function (app) {
                 console.log("----------outfits-----------");
                 if (outfitResult.length == 0) {
                     res.render('outfits.html', { clothes: clothing, outfits: outfitResult });
+                    return;
                 }
                 for (let index = 0; index < outfitResult.length; index++) {
                     console.log("Name: " + outfitResult[index].name, "| Clothing: " + outfitResult[index].clothing, "| Weather: " + outfitResult[index].weather);
